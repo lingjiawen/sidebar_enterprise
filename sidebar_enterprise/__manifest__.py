@@ -2,7 +2,7 @@
 
 {
     "name": "sidebar_enterprise",
-    'summary': "Oddo Enterprise Sidebar",
+    "summary": "Oddo Enterprise Sidebar",
     "description": "Oddo Enterprise Sidebar",
     "version": "12.0.0.1",
     "author": "misterling",
@@ -15,9 +15,10 @@
         'views/assets.xml',
         'views/users.xml',
     ],
-    'qweb': [
+    "qweb": [
         'static/src/xml/form_view.xml',
         'static/src/xml/sidebar.xml',
     ],
-    'auto_install': True,
+    "images": ['static/images/screen.png'],
+    "auto_install": True,
 }
