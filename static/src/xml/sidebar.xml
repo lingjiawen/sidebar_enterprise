@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="sidebar_enterprise.app_sidebar">
+        <div id="app-sidebar" class="app-sidebar-panel">
+            <div class="app-sidebar">
+                <ul id="sidebar" class="app-sidebar-menu">
+                    <li class="nav-item" t-as="menu" t-foreach="menu_data['children']">
+                        <t t-set="debug_param"
+                           t-value="session_info.debug? (session_info.debug === 'assets' ? '?debug=assets' : '?debug') : ''"/>
+                        <a t-att-href="'/web' + debug_param + '#menu_id=' + menu['id'] + '&amp;action='"
+                           t-att-class="menu['children'] ? 'nav-link nav-toggle': 'nav-link'"
+                           t-att-data-menu-xmlid="menu['xmlid']"
+                           t-att-data-menu="menu['id']"
+                           t-att-data-action-model="menu['action'] and menu['action'].split(',')[0] or None"
+                           t-att-data-action-id="menu['action'] and menu['action'].split(',')[1] or None">
+                            <img t-attf-src="/web/image/ir.ui.menu/{{ menu['id'] }}/web_icon_data"
+                                 t-att-alt="menu['name']" class="app-sidebar-menuitem"
+                                 t-att-title="menu['name']"/>
+                            <span class="title">
+                                <t t-esc="menu['name']"/>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </t>
+</templates>
