@@ -19,6 +19,6 @@
         'static/src/xml/form_view.xml',
         'static/src/xml/sidebar.xml',
     ],
-    "images": ['static/images/screen.png'],
+    "images": ['images/screen.png'],
     "auto_install": True,
 }
