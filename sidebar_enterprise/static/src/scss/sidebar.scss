@@ -3,12 +3,13 @@
 $odoo-sidebar-width: 180px;
 
 .app-sidebar-panel {
-	flex: 0 0 $odoo-sidebar-width;	
+    flex: 0 0 $odoo-sidebar-width;
     background-color: $gray-base;
     height: 100% !important;
     overflow-y: auto;
+
     @media (max-width: 768px) {
-      display: none;
+        display: none;
     }
 }
 
@@ -25,32 +26,36 @@ $odoo-sidebar-width: 180px;
 .app-sidebar {
     white-space: nowrap;
     padding: 0;
+
     .app-sidebar-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    >li {
-        display: block;
+        list-style: none;
         margin: 0;
         padding: 0;
-        border: 0px;
-        >a {
+
+        >li {
             display: block;
-            position: relative;
             margin: 0;
+            padding: 0;
             border: 0px;
-            padding: 8px 15px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 300;
-            color: $gray-lighter;
-            overflow: hidden;
-            text-overflow: ellipsis;
+
+            >a {
+                display: block;
+                position: relative;
+                margin: 0;
+                border: 0px;
+                padding: 8px 15px;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 300;
+                color: $gray-lighter;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
-    }
-        > li:hover > a{
-	    background: darken(#0099ff, 15%);
-	    color: #fff;
+
+        >li:hover>a {
+            background: darken(#0099ff, 15%);
+            color: #fff;
         }
     }
 }
@@ -67,4 +72,9 @@ $odoo-sidebar-width: 180px;
 
 .nav-item-click {
     background: $nav-toggle-color;
+}
+
+.o_mobile_menu_toggle {
+    position: absolute;
+    right: 0;
 }
