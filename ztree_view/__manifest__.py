@@ -11,7 +11,7 @@
         'views/assets.xml',
         'views/res_company.xml',
     ],
-    'images': ['static/description/1.png'],
+    'images': ['static/description/screen.png'],
     'installable': True,
     'auto_install': False
 }
