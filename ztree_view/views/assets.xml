@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ztree view assets" name="ztree_view_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/ztree_view/static/src/js/ztree_view_view.js"/>
+            <script type="text/javascript" src="/ztree_view/static/src/js/ztree_view_model.js"/>
+            <script type="text/javascript" src="/ztree_view/static/src/js/ztree_view_controller.js"/>
+            <script type="text/javascript" src="/ztree_view/static/src/js/ztree_view_renderer.js"/>
+        </xpath>
+    </template>
+
+</odoo>

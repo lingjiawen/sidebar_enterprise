@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_company_view_ztree" model="ir.ui.view">
+        <field name="name">ztree view</field>
+        <field name="model">res.company</field>
+        <field name="arch" type="xml">
+            <ztree show_name="name" parent_id_name="parent_id">
+                <div>
+                    <div class="oe_title" style="display: inline-block;">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <field name="logo" class="oe_avatar"/>
+                </div>
+                <group>
+                    <group string="基本信息">
+                        <field name="name"/>
+                        <field name="website"/>
+                    </group>
+                    <group string="联系信息">
+                        <field name="phone"/>
+                        <field name="email"/>
+                    </group>
+                </group>
+            </ztree>
+        </field>
+    </record>
+
+    <record id="base.action_res_company_form" model="ir.actions.act_window">
+        <field name="view_mode">tree,kanban,ztree,form</field>
+    </record>
+</odoo>
