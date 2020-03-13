@@ -4,7 +4,7 @@
     'description': """
         ztree view, a view which can show level relationship via tree
     """,
-
+    'license': "LGPL-3",
     'author': "misterling",
     'depends': ['base'],
     'data': [
